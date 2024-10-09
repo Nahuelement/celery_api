@@ -2,11 +2,15 @@ import time
 
 from celery import group, shared_task
 from django.core.management import call_command
+from dcelery.celery_config import app
+import logging
+
+logger = logging.getLogger(__name__)
 
 
-# @shared_task
-# def management_command():
-#     call_command("test_command")
+@app.task(queue="tasks")
+def management_command():
+    print("Probando tasks folder")
 
 # @shared_task
 # def tp1(queue='celery'):

@@ -31,6 +31,27 @@ def task2():
     print("Running task 2")
 
 """
+| Minute (0 - 59) | Hour (0 - 23) | Day of the Month (1 - 31) | Month (1 - 12) | Day of the Week (0 - 6) (Sunday=0 or 7) | Explicación                              |
+|-----------------|---------------|---------------------------|----------------|-----------------------------------------|------------------------------------------|
+| *               | *             | *                         | *              | *                                       | Ejecuta cada minuto                      |
+| */5             | *             | *                         | *              | *                                       | Ejecuta cada 5 minutos                   |
+| 30              | *             | *                         | *              | *                                       | Ejecuta cada hora a los 30 minutos       |
+| 0               | 9             | *                         | *              | *                                       | Ejecuta todos los días a las 9 AM        |
+| 0               | 14            | *                         | *              | 1                                       | Ejecuta todos los lunes a las 2 PM       |
+| 0               | 0             | 1,15                      | *              | *                                       | Ejecuta el 1º y 15º de cada mes          |
+| 0               | 20,23         | *                         | *              | 5                                       | Ejecuta los viernes a las 8 PM y 11 PM   |
+| */15            | *             | *                         | *              | *                                       | Ejecuta cada 15 segundos (no estándar)   |
+| 0               | 0             | *                         | *              | *                                       | Ejecuta todos los días a la medianoche   |
+| 0               | 12            | *                         | *              | MON                                     | Ejecuta todos los lunes a las 12 PM      |
+| 0               | 0             | 1-7                       | *              | *                                       | Ejecuta los primeros 7 días de cada mes  |
+| 0               | 0/2           | *                         | *              | *                                       | Ejecuta cada 2 horas                     |
+| 0               | */6           | *                         | *              | *                                       | Ejecuta cada 6 horas                     |
+| 0               | 0-8/2         | *                         | *              | *                                       | Ejecuta cada 2 horas desde medianoche hasta las 8 AM |
+| 0               | 0,12          | *                         | *              | *                                       | Ejecuta a medianoche y al mediodía todos los días |
+| 0               | 0             | *                         | *              | 0                                       | Ejecuta todos los domingos a la medianoche |
+| 0               | 0             | 1                         | 1              | *                                       | Ejecuta el 1 de enero de cada año        |
+| 0               | 0             | 1                         | 1              | MON                                     | Ejecuta el primer lunes de enero de cada año |
+
 * * * * *
 | | | | |
 | | | | +----- Day of the Week (0 - 6) (Sunday=0 or 7)
